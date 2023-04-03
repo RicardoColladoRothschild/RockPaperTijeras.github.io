@@ -28,13 +28,13 @@ function playeTouchPaper(){
 
 
 function pcPlay(){
-    let n = Math.random() * 3;
-        if(n===0){
+    let n = Math.floor(Math.random() * 3);
+        if(n==0){
             return "tijeras";
-        }else if(n===1){
+        }else if(n==1){
             return "paper";
 
-        }else if(n===2){
+        }else if(n==2){
             return "rock";
         }
        
