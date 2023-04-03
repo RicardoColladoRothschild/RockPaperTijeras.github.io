@@ -1,25 +1,29 @@
 let jugador;
 let pc;
-let counter;
-let playerPoints;
-let pcPoints;
+let counter = 0;
+let playerPoints = 0;
+let pcPoints = 0;
+
 
 function playerTouchTijeras(){
     jugador = "tijeras";
     pc = pcPlay();
-    alert(`Player choice: ${jugador}`);
+    comparePlays(pc,jugador);
+    
 }
 
 function playeTouchRock(){
     jugador = "rock";
     pc = pcPlay();
-        alert(`Player choice: ${jugador}`);
+    comparePlays(pc,jugador);
+      
 }
 
 function playeTouchPaper(){
     jugador="paper";
     pc = pcPlay();
-    alert(`Player choice: ${jugador}`);
+    comparePlays(pc,jugador);
+   
 }
 
 
@@ -33,7 +37,7 @@ function pcPlay(){
         }else if(n===2){
             return "rock";
         }
-     return "rock";   
+       
         
 }
 
@@ -42,5 +46,48 @@ function restart(){
     playerPoints = 0;
     pcPoints = 0;
 
+}
+
+function comparePlays(pc,player){
+
+    if((pc==="tijeras") && (player==="rock")){
+        playerPoints+=1;
+        counter+=1;
+        alert("Points to Player, pc plays->Tijeras");
+    }else if((pc==="rock") && (player==="tijeras")){
+        pcPoints+=1;
+        counter+=1;
+        alert("Points to Pc, pc plays->Rock");
+    }else if((pc==="paper") && (player==="tijeras")){
+        playerPoints+=1;
+        counter+=1;
+        alert("Points to player, pc plays->Paper");
+    }else if((pc==="tijeras") && (player==="paper")){
+        pcPoints+=1;
+        counter+=1;
+        alert("Points to Pc, pc plays->Tijeras");
+    }else if((pc==="rock") && (player==="paper")){
+        playerPoints+=1;
+        counter+=1;
+        alert("Points to Player, pc plays->Rock");
+    }else if((pc==="paper") && (player==="Rock")){
+        pcPoints+=1;
+        counter+=1;
+        alert("Points to Pc, pc plays->Paper");
+    }else if((pc==="rock") && (player==="rock")){
+        
+        counter+=1;
+        alert("Is A Draw, pc plays->Rock");
+    }
+    else if((pc==="paper") && (player==="paper")){
+        
+        counter+=1;
+        alert("Is A Draw, pc plays->Paper");
+    }else if((pc==="tijera") && (player==="tijera")){
+        
+        counter+=1;
+        alert("Is A Draw, pc plays->Tijeras");
+    }
+    
 }
 
