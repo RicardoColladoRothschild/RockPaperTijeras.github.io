@@ -1,0 +1,38 @@
+:root{
+    --backgroundBody:#9f90ea;
+    --backgroundcontainer:#171a4a;
+    --lettercolor:#675cb0;
+
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width:100%;
+    height: 100vh;
+    display:grid;
+    place-items: center;
+    background-color: var(--backgroundcontainer);
+    color:var(--lettercolor);
+}
+
+.container{
+    width:360px;
+    height: 300px;
+    min-width: 320px;
+    max-width: 360px;
+    padding:24px;
+    display:flex;
+    flex-direction:column;
+    border:none;
+    border-radius: 10px;
+    background-color: var(--backgroundBody);
+    color:var(--backgroundcontainer);
+    box-shadow: 0 8px 8px rgba(56,73,86,0.75);
+}
