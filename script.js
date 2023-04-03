@@ -3,6 +3,7 @@ let pc;
 let counter;
 let playerPoints;
 let pcPoints;
+
 function playerTouchTijeras(){
     jugador = "tijeras";
     pc = pcPlay();
@@ -11,11 +12,13 @@ function playerTouchTijeras(){
 
 function playeTouchRock(){
     jugador = "rock";
+    pc = pcPlay();
         alert(`Player choice: ${jugador}`);
 }
 
 function playeTouchPaper(){
     jugador="paper";
+    pc = pcPlay();
     alert(`Player choice: ${jugador}`);
 }
 
@@ -32,5 +35,12 @@ function pcPlay(){
         }
      return "rock";   
         
+}
+
+function restart(){
+    counter = 0;
+    playerPoints = 0;
+    pcPoints = 0;
+
 }
 
