@@ -28,7 +28,7 @@ function playeTouchPaper(){
 
 
 function pcPlay(){
-    let n = Math.floor(Math.random() * 3);
+    let n = Math.floor(Math.random() * 4);
         if(n==0){
             return "tijeras";
         }else if(n==1){
@@ -75,7 +75,7 @@ function comparePlays(pc,player){
         counter+=1;
         document.getElementById("show_a_Winner").innerHTML = "Winner is Player, played paper / Pc Rock";
         //alert("Points to Player, pc plays->Rock");
-    }else if((pc==="paper") && (player==="Rock")){
+    }else if((pc==="paper") && (player==="rock")){
         pcPoints+=1;
         counter+=1;
         document.getElementById("show_a_Winner").innerHTML = "Winner is PC, played Paper/  Player played Rock";
