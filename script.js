@@ -53,40 +53,49 @@ function comparePlays(pc,player){
     if((pc==="tijeras") && (player==="rock")){
         playerPoints+=1;
         counter+=1;
-        alert("Points to Player, pc plays->Tijeras");
+        document.getElementById("show_a_Winner").innerHTML = "Winner is Player, played Rock / Pc Played Scissors";
+        //alert("Points to Player, pc plays->Tijeras");
     }else if((pc==="rock") && (player==="tijeras")){
         pcPoints+=1;
         counter+=1;
-        alert("Points to Pc, pc plays->Rock");
+        document.getElementById("show_a_Winner").innerHTML = "Winner is PC, played Rock /  Player played Scissors";
+        //alert("Points to Pc, pc plays->Rock");
     }else if((pc==="paper") && (player==="tijeras")){
         playerPoints+=1;
         counter+=1;
-        alert("Points to player, pc plays->Paper");
+        document.getElementById("show_a_Winner").innerHTML = "Winner is Player, played Scissors /  Pc Played Paper";
+        //alert("Points to player, pc plays->Paper");
     }else if((pc==="tijeras") && (player==="paper")){
         pcPoints+=1;
         counter+=1;
-        alert("Points to Pc, pc plays->Tijeras");
+        document.getElementById("show_a_Winner").innerHTML = "Winner is PC, played Scissors/  Player played Paper";
+       // alert("Points to Pc, pc plays->Tijeras");
     }else if((pc==="rock") && (player==="paper")){
         playerPoints+=1;
         counter+=1;
-        alert("Points to Player, pc plays->Rock");
+        document.getElementById("show_a_Winner").innerHTML = "Winner is Player, played paper / Pc Rock";
+        //alert("Points to Player, pc plays->Rock");
     }else if((pc==="paper") && (player==="Rock")){
         pcPoints+=1;
         counter+=1;
-        alert("Points to Pc, pc plays->Paper");
+        document.getElementById("show_a_Winner").innerHTML = "Winner is PC, played Paper/  Player played Rock";
+        //alert("Points to Pc, pc plays->Paper");
     }else if((pc==="rock") && (player==="rock")){
         
         counter+=1;
-        alert("Is A Draw, pc plays->Rock");
+        document.getElementById("show_a_Winner").innerHTML = "Was a Draw";
+        //alert("Is A Draw, pc plays->Rock");
     }
     else if((pc==="paper") && (player==="paper")){
         
         counter+=1;
-        alert("Is A Draw, pc plays->Paper");
+        document.getElementById("show_a_Winner").innerHTML = "Was a Draw";
+        //alert("Is A Draw, pc plays->Paper");
     }else if((pc==="tijera") && (player==="tijera")){
         
         counter+=1;
-        alert("Is A Draw, pc plays->Tijeras");
+        document.getElementById("show_a_Winner").innerHTML = "Was a Draw";
+        //alert("Is A Draw, pc plays->Tijeras");
     }
     
 }
