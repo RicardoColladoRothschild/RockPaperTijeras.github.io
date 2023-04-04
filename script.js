@@ -46,6 +46,9 @@ function restart(){
     playerPoints = 0;
     pcPoints = 0;
     document.getElementById("show_a_Winner").innerHTML = "";
+    document.getElementById("playerPointsView").innerHTML = `You = ${playerPoints}`;
+    document.getElementById("pcPointsView").innerHTML = `PC = ${pcPoints}`;
+    
 
 }
 
@@ -55,31 +58,39 @@ function comparePlays(pc,player){
         playerPoints+=1;
         counter+=1;
         document.getElementById("show_a_Winner").innerHTML = "Winner is Player, played Rock / Pc Played Scissors";
+        //
+        document.getElementById("playerPointsView").innerHTML = `You = ${playerPoints}`;
         //alert("Points to Player, pc plays->Tijeras");
     }else if((pc==="rock") && (player==="tijeras")){
         pcPoints+=1;
         counter+=1;
         document.getElementById("show_a_Winner").innerHTML = "Winner is PC, played Rock /  Player played Scissors";
+        document.getElementById("pcPointsView").innerHTML = `PC = ${pcPoints}`;
         //alert("Points to Pc, pc plays->Rock");
     }else if((pc==="paper") && (player==="tijeras")){
         playerPoints+=1;
         counter+=1;
         document.getElementById("show_a_Winner").innerHTML = "Winner is Player, played Scissors /  Pc Played Paper";
+        document.getElementById("playerPointsView").innerHTML = `You = ${playerPoints}`;
         //alert("Points to player, pc plays->Paper");
     }else if((pc==="tijeras") && (player==="paper")){
         pcPoints+=1;
         counter+=1;
         document.getElementById("show_a_Winner").innerHTML = "Winner is PC, played Scissors/  Player played Paper";
+        document.getElementById("pcPointsView").innerHTML = `PC = ${pcPoints}`;
        // alert("Points to Pc, pc plays->Tijeras");
     }else if((pc==="rock") && (player==="paper")){
         playerPoints+=1;
         counter+=1;
         document.getElementById("show_a_Winner").innerHTML = "Winner is Player, played paper / Pc Rock";
+        document.getElementById("playerPointsView").innerHTML = `You = ${playerPoints}`;
         //alert("Points to Player, pc plays->Rock");
     }else if((pc==="paper") && (player==="rock")){
         pcPoints+=1;
         counter+=1;
         document.getElementById("show_a_Winner").innerHTML = "Winner is PC, played Paper/  Player played Rock";
+        document.getElementById("pcPointsView").innerHTML = `PC = ${pcPoints}`;
+        
         //alert("Points to Pc, pc plays->Paper");
     }else if((pc==="rock") && (player==="rock")){
         
