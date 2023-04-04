@@ -45,6 +45,7 @@ function restart(){
     counter = 0;
     playerPoints = 0;
     pcPoints = 0;
+    document.getElementById("show_a_Winner").innerHTML = "";
 
 }
 
